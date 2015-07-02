@@ -10,7 +10,7 @@ import com.opensymphony.xwork2.conversion.annotations.TypeConversion;
 public class IndexAction extends ActionSupport {
 	private Date now = new Date(System.currentTimeMillis());
 
-	@TypeConversion(converter = "com.demo.struts.followyourstar.converters.DateConverter")
+	@TypeConversion(converter = "com.demo.struts.followyourstar.converters")
 	public Date getDateNow() {
 		return now;
 	}

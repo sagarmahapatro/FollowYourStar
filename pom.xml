@@ -8,9 +8,9 @@
 	<name>FollowYourStar Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-	   <spring-version>4.1.4.RELEASE</spring-version>
-	   <struts-version>2.3.20</struts-version>
-	   <hibernet-version>4.3.8.Final</hibernet-version>
+		<spring-version>4.1.4.RELEASE</spring-version>
+		<struts-version>2.3.20</struts-version>
+		<hibernet-version>4.3.8.Final</hibernet-version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -89,6 +89,16 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>${hibernet-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+			<version>${struts-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
 		</dependency>
 
 	</dependencies>

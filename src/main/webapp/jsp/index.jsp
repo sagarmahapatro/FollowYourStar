@@ -5,10 +5,11 @@
 <s:head />
 </head>
 <body>
-	<s:form action="helloWorld">
-		<s:textfield label="What is your name?" name="name" />
-		<s:textfield label="What is the date?" name="dateNow" />
-		<s:submit />
-	</s:form>
+	<h1>Welcome Follow Your Star Application</h1>
+	<s:url id="login" action="login"  />
+	<s:a href="%{login}">Please Click Here To LogIn:</s:a>
+	<s:url id="registration" action="registration"  />
+	<br></br>
+	<s:a href="%{registration}">Please Click Here To Create Account:</s:a>
 </body>
 </html>

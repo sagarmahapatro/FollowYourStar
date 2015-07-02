@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.demo.struts.followyourstar.service.dtos.ContestantVoteDTO;
+import com.demo.struts.followyourstar.service.dtos.EventDTO;
 
 @Service
 public class VoteStatisticServicImpl implements VoteStatisticServic {
@@ -24,6 +25,11 @@ public class VoteStatisticServicImpl implements VoteStatisticServic {
 	@Override
 	public ContestantVoteDTO topContaistantOfAEvent(long eventid) {
 		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public EventDTO getEventWithHeightMemeberEnrolled(){
 		return null;
 	}
 

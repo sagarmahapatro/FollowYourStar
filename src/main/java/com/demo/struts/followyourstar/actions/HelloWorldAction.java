@@ -16,7 +16,7 @@ public class HelloWorldAction extends ActionSupport {
 	private Date now;
 	private String name;
 
-	@TypeConversion(converter = "com.fdar.apress.s2.DateConverter")
+	@TypeConversion(converter = "com.demo.struts.followyourstar.converters.DateConverter")
 	@RequiredFieldValidator(message = "Please enter the date")
 	public void setDateNow(Date now) {
 		this.now = now;
