@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/decorators">
+	<excludes>
+		<pattern>/nodecorate/*</pattern>
+		<pattern>*.css</pattern>
+		<pattern>/scripts/*</pattern>
+		<pattern>/images/*</pattern>
+		<pattern>/*.htm</pattern>
+		<pattern>/*.html</pattern>
+	</excludes>
+	<decorator name="frontlayout" page="layout.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+</decorators>   
