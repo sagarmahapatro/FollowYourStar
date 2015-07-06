@@ -2,12 +2,11 @@ package com.demo.struts.followyourstar.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.demo.struts.followyourstar.persistent.daos.UserDAO;
 import com.demo.struts.followyourstar.persistent.entities.User;
 import com.demo.struts.followyourstar.service.dtos.UserDTO;
-
-import freemarker.template.utility.StringUtil;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -28,6 +27,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
+	@Transactional()
 	public UserDTO registerUser(String UserName, String firstName,
 			String lastName, String mobileNumber, String emailId,String password) {
 		// TODO Auto-generated method stub

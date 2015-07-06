@@ -8,7 +8,7 @@
 	<name>FollowYourStar Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
-		<spring-version>4.1.4.RELEASE</spring-version>
+		<spring-version>3.0.5.RELEASE</spring-version>
 		<struts-version>2.3.20</struts-version>
 		<hibernet-version>4.3.8.Final</hibernet-version>
 	</properties>
@@ -75,7 +75,7 @@
 			<groupId>log4j</groupId>
 			<artifactId>log4j</artifactId>
 			<version>1.2.14</version>
-			<scope>runtime</scope>
+
 		</dependency>
 
 		<!-- persistent dependencies -->
@@ -101,6 +101,23 @@
 			<version>1.4</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>${spring-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aspects</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.30</version>
+			<scope>runtime</scope>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<finalName>FollowYourStar</finalName>
@@ -108,8 +125,8 @@
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>1.7</source>
+					<target>1.7</target>
 				</configuration>
 			</plugin>
 			<plugin>
