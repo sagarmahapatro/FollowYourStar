@@ -1,0 +1,1 @@
+"D:\software\mysql-5.6.24-winx64\mysql-5.6.24-winx64\bin\mysql" -u sagar -p

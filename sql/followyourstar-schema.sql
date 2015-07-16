@@ -75,5 +75,8 @@ CREATE TABLE IF NOT EXISTS VOTER (
    FOREIGN KEY (USER_FK) REFERENCES USER(ID)
 );
 
+INSERT INTO USER(FIRST_NAME, LAST_NAME,EMAIL, USER_PASSWORD, ROLE) values ('root','root','root@followyourstar.com','root','admin');
+
 show tables;
+
 

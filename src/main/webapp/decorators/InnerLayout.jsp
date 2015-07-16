@@ -4,7 +4,7 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
 	prefix="decorator"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +20,7 @@
 </head>
 <body>
 	<!--  -->
-    <s:set name="currentUser" value="#session['user']"/>
+	<s:set name="currentUser" value="#session['user']" />
 	<nav id="myNavbar"
 		class="navbar navbar-default navbar-inverse navbar-fixed-top"
 		role="navigation">
@@ -44,12 +44,10 @@
 						target="_blank">About</a></li>
 					<li><a href="http://www.tutorialrepublic.com/contact-us.php"
 						target="_blank">Contact</a></li>
-					<s:if	test="%{#session.user != null}" >
+					<s:if test="%{#session.user != null}">
 						<s:if test="%{#session.user.isAuthonticated = true}">
-						  <s:url id="logoutUrl" action="logout" />
-						  <li>
-						  <s:a href="%{logoutUrl}" >Log Out</s:a>
-						  </a></li>
+							<s:url id="logoutUrl" action="logout" />
+							<li><s:a href="%{logoutUrl}">Log Out</s:a> </a></li>
 						</s:if>
 					</s:if>
 				</ul>
@@ -59,7 +57,28 @@
 
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-sm-3 col-md-2 sidebar">
+				<ul class="nav nav-sidebar">
+					<li class="active"><a href="#">Overview <span
+							class="sr-only">(current)</span></a></li>
+					<li><a href="#">Reports</a></li>
+					<li><a href="#">Analytics</a></li>
+					<li><a href="#">Export</a></li>
+				</ul>
+				<ul class="nav nav-sidebar">
+					<li><a href="">Nav item</a></li>
+					<li><a href="">Nav item again</a></li>
+					<li><a href="">One more nav</a></li>
+					<li><a href="">Another nav item</a></li>
+					<li><a href="">More navigation</a></li>
+				</ul>
+				<ul class="nav nav-sidebar">
+					<li><a href="">Nav item again</a></li>
+					<li><a href="">One more nav</a></li>
+					<li><a href="">Another nav item</a></li>
+				</ul>
+			</div>
+			<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
 				<div id="debugLayer">
 					<decorator:body />
 				</div>

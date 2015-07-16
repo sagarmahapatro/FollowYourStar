@@ -8,31 +8,35 @@
 		<default-interceptor-ref name="paramsPrepareParamsStack" />
 		<action name="index"
 			class="com.demo.struts.followyourstar.actions.BaseAction">
-			<result>/jsp/index.jsp</result>
+			<result>/jsp/outer/index.jsp</result>
 		</action>
 
 		<action name="registration"
 			class="com.demo.struts.followyourstar.actions.BaseAction">
-			<result>/jsp/registration.jsp</result>
+			<result>/jsp/outer/registration.jsp</result>
 		</action>
 
 		<action name="login"
 			class="com.demo.struts.followyourstar.actions.BaseAction">
-			<result>/jsp/login.jsp</result>
+			<result>/jsp/outer/login.jsp</result>
 		</action>
 
 		<action name="updateUser"
 			class="updateUserAction">
-			<result>/jsp/registration.jsp</result>
+			<result>/jsp//outer/registration.jsp</result>
 		</action>
 
-		<action name="outhaction"
-			class="com.demo.struts.followyourstar.actions.OuthAction">
-
+		<action name="outhUser"
+			class="outhactionAction">
+			 <result name="login">/jsp/authenticated/dashboard.jsp</result> 
+             <result name="error">/jsp/outer/login.jsp</result>
 		</action>
-		<action name="helloWorld" class="helloWorldAction">
-			<result name="input">/jsp/index.jsp</result>
-			<result>/jsp/helloWorld.jsp</result>
+		
+		
+		<action name="logout" class="LogoutAction">
+			<result >/jsp/outer/index.jsp</result>
 		</action>
+		
+		
 	</package>
 </struts>

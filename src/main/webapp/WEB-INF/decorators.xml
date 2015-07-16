@@ -9,6 +9,9 @@
 		<pattern>/*.html</pattern>
 	</excludes>
 	<decorator name="frontlayout" page="layout.jsp">
-		<pattern>/*</pattern>
+		<pattern>*/outer/*</pattern>
+	</decorator>
+	<decorator name="authenticatedlayout" page="InnerLayout.jsp">
+		<pattern>*/authenticated/*</pattern>
 	</decorator>
 </decorators>   

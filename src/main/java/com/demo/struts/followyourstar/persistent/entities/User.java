@@ -8,10 +8,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="user")
+@NamedQueries({
+    @NamedQuery(name="User.findByEmail",
+                query="SELECT u FROM User u WHERE u.email=:email")
+  
+}) 
 public class User implements DomainObject {
 
 	private long id;

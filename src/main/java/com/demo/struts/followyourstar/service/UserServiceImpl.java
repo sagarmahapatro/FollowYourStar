@@ -15,11 +15,12 @@ public class UserServiceImpl implements UserService {
 	UserDAO userDAO = null;
 
 	@Override
+	@Transactional()
 	public UserDTO login(String userEmail, String password) {
 		// TODO Auto-generated method stub
 		User  user = userDAO.findByEmail(userEmail);
-		 if(user.getPassword().equals(password)){
-			 UserDTO userDTO = new UserDTO();
+		 if(user != null && user.getPassword().equals(password)){
+			 UserDTO userDTO = UserDTO.createUserDTO(user);
 			 userDTO.isAuthonticated = true;
 			 return userDTO;
 		 }
